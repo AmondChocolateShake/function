@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width: 100px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    let rootElement=document.getElementById("root");
+    console.dir(rootElement);
+    let weeks=["월요일 오늘","수요일 쉼", "금요일 놀자"];
+
+
+    let counter=0;
+    
+    function increase(value){
+      value = value+1;
+      console.log(value);
+    } 
+    
+    
+    //클릭을 통해 문서를 만들어낸다.
+    rootElement.addEventListener("click",function(){
+      rootElement.textContent=weeks[counter];
+
+      counter=counter+1;
+      if(counter>2) counter=0;
+      console.log(counter);
+    });
+    rootElement.innerHTML=weeks[0];
+    
+
+
+
+  </script>
+</body>
+</html>
