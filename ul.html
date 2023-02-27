@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+
+  <script>
+
+    function dataFunc(a,b,c,d){
+      let obj={
+        parentData:document.querySelector(a),
+        childrenData:document.createElement(b),
+        gChildren:document.createElement(c),
+        gChildrenText:d
+      }
+      return obj;
+    }
+
+    let dataForm=dataFunc("#root","ul","li","hello");
+
+    
+
+    
+    let root=dataForm.parentData;
+    console.dir(root);
+    let aa=dataForm.childrenData;
+    root.appendChild(aa);
+    let bb=dataForm.gChildren;
+    root.appendChild(bb);
+    bb.textContent=dataForm.gChildrenText;
+    
+
+  </script>
+</body>
+</html>

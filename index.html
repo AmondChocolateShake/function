@@ -19,7 +19,7 @@
     let rootElement=document.getElementById("root");
     console.dir(rootElement);
     let weeks=["월요일 오늘","수요일 쉼", "금요일 놀자"];
-
+    let colors=["blue","yellow","red"];
 
     let counter=0;
     
@@ -32,7 +32,7 @@
     //클릭을 통해 문서를 만들어낸다.
     rootElement.addEventListener("click",function(){
       rootElement.textContent=weeks[counter];
-
+      rootElement.style.color=colors[counter];
       counter=counter+1;
       if(counter>2) counter=0;
       console.log(counter);
